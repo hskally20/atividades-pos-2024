@@ -1,0 +1,104 @@
+<!DOCTYPE quiz [
+<!ELEMENT quiz (disciplina, professor, turma, data, questões)>
+<!ATTLIST quiz versao CDATA #REQUIRED>
+<!ELEMENT disciplina (#PCDATA)>
+<!ELEMENT professor (nome, matrícula?)>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT matrícula (#PCDATA)>
+<!ELEMENT turma (#PCDATA)>
+<!ELEMENT data (#PCDATA)>
+<!ELEMENT questões (questão+)>
+<!ELEMENT questão (enunciado, pontuação, alternativas)>
+<!ELEMENT enunciado (#PCDATA)>
+<!ELEMENT pontuação (#PCDATA)>
+<!ELEMENT alternativas (alternativa+)>
+<!ELEMENT alternativa (#PCDATA)>
+<!ATTLIST alternativa correta (sim|nao) #REQUIRED> 
+]>
+ <quiz versao="a1">
+    <disciplina>desenvolvimento web</disciplina>
+    <professor>
+      <nome>Ari</nome>
+      <matrícula>226677</matrícula>
+    </professor>
+    <turma>info 2v</turma>
+    <data>2024/07/01</data>
+    <questões>
+      <questão>
+        <enunciado>É correto usar update sem where no banco de dados?</enunciado>
+        <pontuação>5</pontuação>
+        <alternativas>
+          <alternativa correta="sim">Sim</alternativa>
+          <alternativa correta="nao">Não</alternativa>
+        </alternativas>
+      </questão>
+  
+    
+
+    <questão>
+      <enunciado>É correto usar update sem where no banco de dados?</enunciado>
+      <pontuação>5</pontuação>
+      <alternativas>
+        <alternativa correta="sim">Sim</alternativa>
+        <alternativa correta="nao">Não</alternativa>
+        <alternativa correta="nao">Depende</alternativa>
+        <alternativa correta="nao">Somente em casos específicos</alternativa>
+      </alternativas>
+    </questão>
+
+    <questão>
+      <enunciado>Qual é a principal linguagem de marcação usada na web?</enunciado>
+      <pontuação>5</pontuação>
+      <alternativas>
+        <alternativa correta="nao">CSS</alternativa>
+        <alternativa correta="nao">JavaScript</alternativa>
+        <alternativa correta="sim">HTML</alternativa>
+        <alternativa correta="nao">Python</alternativa>
+      </alternativas>
+    </questão>
+
+    <questão>
+      <enunciado>O que significa CSS?</enunciado>
+      <pontuação>5</pontuação>
+      <alternativas>
+        <alternativa correta="nao">Computer Style Sheets</alternativa>
+        <alternativa correta="sim">Cascading Style Sheets</alternativa>
+        <alternativa correta="nao">Creative Style Sheets</alternativa>
+        <alternativa correta="nao">Colorful Style Sheets</alternativa>
+      </alternativas>
+    </questão>
+
+    <questão>
+      <enunciado>Qual é a função do JavaScript em uma página web?</enunciado>
+      <pontuação>5</pontuação>
+      <alternativas>
+        <alternativa correta="nao">Estilizar a página</alternativa>
+        <alternativa correta="nao">Marcar a estrutura do conteúdo</alternativa>
+        <alternativa correta="sim">Adicionar interatividade à página</alternativa>
+        <alternativa correta="nao">Gerenciar banco de dados</alternativa>
+      </alternativas>
+    </questão>
+
+    <questão>
+      <enunciado>O que é um framework front-end?</enunciado>
+      <pontuação>5</pontuação>
+      <alternativas>
+        <alternativa correta="sim">Uma biblioteca de código pronta para facilitar o desenvolvimento da interface do usuário</alternativa>
+        <alternativa correta="nao">Uma linguagem de programação</alternativa>
+        <alternativa correta="nao">Um banco de dados</alternativa>
+        <alternativa correta="nao">Um servidor web</alternativa>
+      </alternativas>
+    </questão>
+
+    <questão>
+      <enunciado>Qual das seguintes opções é um framework JavaScript?</enunciado>
+      <pontuação>5</pontuação>
+      <alternativas>
+        <alternativa correta="nao">Django</alternativa>
+        <alternativa correta="sim">React</alternativa>
+        <alternativa correta="nao">Laravel</alternativa>
+        <alternativa correta="nao">Flask</alternativa>
+      </alternativas>
+    </questão>
+  </questões>
+</quiz>
