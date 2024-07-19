@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE imobiliaria [
+  <!ELEMENT imobiliaria (imovel+)>
+  <!ELEMENT imovel (descricao, proprietario, endereco, caracteristicas, valor)>
+  <!ELEMENT descricao (#PCDATA)>
+  
+  <!ELEMENT proprietario (nome, (email?, telefone*))>
+  <!ELEMENT nome (#PCDATA)>
+  <!ELEMENT email (#PCDATA)>
+  <!ELEMENT telefone (#PCDATA)>
+  
+  <!ELEMENT endereco (rua, bairro, cidade, numero?)>
+  <!ELEMENT rua (#PCDATA)>
+  <!ELEMENT bairro (#PCDATA)>
+  <!ELEMENT cidade (#PCDATA)>
+  <!ELEMENT numero (#PCDATA)>
+  
+  <!ELEMENT caracteristicas (tamanho, numQuartos, numBanheiros)>
+  <!ELEMENT tamanho (#PCDATA)>
+  <!ELEMENT numQuartos (#PCDATA)>
+  <!ELEMENT numBanheiros (#PCDATA)>
+  
+  <!ELEMENT valor (#PCDATA)>
+]>
+<imobiliaria>
+  <imovel>
+    <descricao>Casa com quintal amplo</descricao>
+    <proprietario>
+      <nome>Ari</nome>
+      <email>ari@example.com</email>
+      <telefone>123456789</telefone>
+    </proprietario>
+    <endereco>
+      <rua>Rua das Flores</rua>
+      <bairro>Jardim Primavera</bairro>
+      <cidade>Cidade Nova</cidade>
+      <numero>123</numero>
+    </endereco>
+    <caracteristicas>
+      <tamanho>250</tamanho>
+      <numQuartos>4</numQuartos>
+      <numBanheiros>3</numBanheiros>
+    </caracteristicas>
+    <valor>R$500.000,00</valor>
+  </imovel>
+
+  <imovel >
+    <descricao>Apartamento de luxo com vista para o mar</descricao>
+    <proprietario>
+      <nome>Bruna</nome>
+      <email>bruna@example.com</email>
+      <telefone>987654321</telefone>
+    </proprietario>
+    <endereco>
+      <rua>Av. Atlântica</rua>
+      <bairro>Centro</bairro>
+      <cidade>Beira Mar</cidade>
+    </endereco>
+    <caracteristicas>
+      <tamanho>180</tamanho>
+      <numQuartos>3</numQuartos>
+      <numBanheiros>2</numBanheiros>
+    </caracteristicas>
+    <valor>R$1.200.000,00</valor>
+  </imovel>
+  <imovel>
+    <descricao>Casa de campo com piscina</descricao>
+    <proprietario>
+      <nome>Carlos</nome>
+      <email>carlos@example.com</email>
+      <telefone>456789123</telefone>
+    </proprietario>
+    <endereco>
+      <rua>Estrada do Sol</rua>
+      <bairro>Zona Rural</bairro>
+      <cidade>Campo Verde</cidade>
+      <numero>789</numero>
+    </endereco>
+    <caracteristicas>
+      <tamanho>350</tamanho>
+      <numQuartos>5</numQuartos>
+      <numBanheiros>4</numBanheiros>
+    </caracteristicas>
+    <valor>R$800.000,00</valor>
+  </imovel>
+
+  <imovel >
+    <descricao>Apartamento moderno no centro</descricao>
+    <proprietario>
+      <nome>Daniela</nome>
+      <email>daniela@example.com</email>
+    </proprietario>
+    <endereco>
+      <rua>Rua Central</rua>
+      <bairro>Centro</bairro>
+      <cidade>Metropolis</cidade>
+    </endereco>
+    <caracteristicas>
+      <tamanho>120</tamanho>
+      <numQuartos>2</numQuartos>
+      <numBanheiros>1</numBanheiros>
+    </caracteristicas>
+    <valor>R$600.000,00</valor>
+  </imovel>
+
+  <imovel>
+    <descricao>Sobrado com jardim</descricao>
+    <proprietario>
+      <nome>Eduardo</nome>
+      <telefone>234567890</telefone>
+    </proprietario>
+    <endereco>
+      <rua>Rua das Palmeiras</rua>
+      <bairro>Residencial</bairro>
+      <cidade>Floripa</cidade>
+      <numero>456</numero>
+    </endereco>
+    <caracteristicas>
+      <tamanho>200</tamanho>
+      <numQuartos>3</numQuartos>
+      <numBanheiros>2</numBanheiros>
+    </caracteristicas>
+    <valor>R$450.000,00</valor>
+  </imovel>
+
+  <imovel >
+    <descricao>Kitnet mobiliada</descricao>
+    <proprietario>
+      <nome>Fernanda</nome>
+      <email>fernanda@example.com</email>
+    </proprietario>
+    <endereco>
+      <rua>Rua dos Estudantes</rua>
+      <bairro>Universitário</bairro>
+      <cidade>Educa</cidade>
+    </endereco>
+    <caracteristicas>
+      <tamanho>40</tamanho>
+      <numQuartos>1</numQuartos>
+      <numBanheiros>1</numBanheiros>
+    </caracteristicas>
+    <valor>R$150.000,00</valor>
+  </imovel>
+</imobiliaria>
