@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:p="http://prato.org"
+        elementFormDefault="qualified">
+        <element name="cardapio">
+            <element name='id' type='integer'/>
+            <element name='nome' type='string'/>
+            <element name="preco">
+            <element name='descricao' type='string'/>
+            <element name='calorias' type='integer'/>
+            <element name='tempero' type='string'/>
+            <complexType>
+                <sequence>
+                    <element name="prato">
+                            <complexType>
+                                <sequence>
+                                    <element name="prato" type="string" minOccurs="0" maxOccurs="unbounded"/>
+                                        <simpleType>
+                                            <restriction base="decimal">
+                                                <fractionDigits value="2"/>
+                                            </restriction>
+                                        </simpleType>
+                                    </element>
+                                    <element name="ingredientes">
+                                        <complexType>
+                                            <sequence>
+                                                <element name="ingrediente" type="string" minOccurs="1" maxOccurs="unbounded"/>
+                                            </sequence>
+                                        </complexType>
+                                        
+                                    </element>
+                                </sequence>
+                            </complexType>
+                    </element>
+               </sequence>
+           </complexType>    
+        </element>
+</schema>
