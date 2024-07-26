@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prato xmlns="http://prato.org" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://prato.org prato.xsd">
+    <nome>hamburg</nome>
+    <refeição>janta</refeição>
+    <ingredientes>
+        <ingrediente> pão </ingrediente>
+        <ingrediente> cebola </ingrediente>
+        <ingrediente> alho </ingrediente>
+        <ingrediente> carne </ingrediente>
+    </ingredientes>
+    <preco>12,00</preco>
+    <dataCadastro>2024/08/03</dataCadastro>
+</prato>

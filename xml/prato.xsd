@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:p="http://prato.org"
+        targetNamespace="http://prato.org"
+        elementFormDefault="qualified">
+
+    <element name="prato">
+        <complexType>
+            <sequence>
+                <element name="nome">
+                    <simpleType>
+                        <restriction base="string">
+                            <maxLength value="100"/>
+                        </restriction>
+                    </simpleType>
+                </element>
+                <element name="refeição">
+                    <simpleType>
+                        <restriction base="string">
+                            <pattern value=" cafe|almoço|janta"/>
+                        </restriction>
+                    </simpleType>
+                </element>
+                <element name="ingredientes">
+                    <complexType>
+                        <sequence>
+                            <element name="ingrediente" type="string" minOccurs="0" maxOccurs="unbounded"/>
+                        </sequence>
+                    </complexType>
+                </element>
+                <element name="preco">
+                    <simpleType>
+                        <restriction base="decimal">
+                            <fractionDigits value="2"/>
+                        </restriction>
+                    </simpleType>
+                </element>
+            </element name="dataCadastro" type="date">
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>
