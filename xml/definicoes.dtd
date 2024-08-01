@@ -1,8 +1,0 @@
-<!ELEMENT cardapio (prato)>
-<!ELEMENT prato (nome,descricao,preco,calorias,tempodePreparo)>
-<!ELEMENT ingredientes (ingrediente+)>
-<!ELEMENT preço (#PCDATA)> 
-<!ELEMENT moeda (moeda+)>
-<!ELEMENT tempero (#PCDATA)>
-<!ELEMENT calorias (#PCDATA)>
-<!ATTLIST preco moeda (USD|BRL) "BRL">
