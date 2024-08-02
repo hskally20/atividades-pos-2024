@@ -1,49 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<cardapio>
-    <prato id="01" >
-        <nome>miojo</nome>
-        
-        <descricao>macarrão instantaneo </descricao>
-        <igredientes> macarrão , tempero e sal </igredientes>
-        <preço> 4 reais </preço>
-        <calorias>580 kcl</calorias>
-        <tempo_de_preparo> 4 min </tempo_de_preparo>
+<cardapio xmlns="http://prato.org"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://prato.org prato.xsd">
+    <prato id="1">
+        <nome>Miojo</nome>
+        <descricao>Macarrão instantâneo</descricao>
+        <ingredientes>
+            <ingrediente>Macarrão</ingrediente>
+            <ingrediente>Tempero</ingrediente>
+            <ingrediente>Sal</ingrediente>
+        </ingredientes>
+        <preco>4.00</preco>
+        <calorias>580</calorias>
+        <tempoPreparo>4 min</tempoPreparo>
         <moeda>BRL</moeda>
     </prato>
-    <prato id="02" >
-        <nome> feijoada </nome>
-        <descricao> boa com chuarrasco </descricao>
-        <igredientes> linguiça, feijão preto e carne de charque </igredientes>
-        <preço> 10 reais </preço>
-        <calorias>780 kcl</calorias>
-        <tempo_de_preparo> 1h e 30m </tempo_de_preparo>
+    <prato id="2">
+        <nome>Feijoada</nome>
+        <descricao>Boa com churrasco</descricao>
+        <ingredientes>
+            <ingrediente>Linguiça</ingrediente>
+            <ingrediente>Feijão preto</ingrediente>
+            <ingrediente>Carne de charque</ingrediente>
+        </ingredientes>
+        <preco>10.00</preco>
+        <calorias>780</calorias>
+        <tempoPreparo>1h 30m</tempoPreparo>
         <moeda>USD</moeda>
     </prato>
-    <prato id="03" >
-        <nome>macarronada </nome>
-        <descricao> muito bom  </descricao>
-        <igredientes> macarrão , carne muida , molho queijo ralado </igredientes>
-        <preço> 15 reais </preço>
-        <calorias>1200 kcl</calorias>
-        <tempo_de_preparo> 50 min </tempo_de_preparo>
+    <prato id="3">
+        <nome>Macarronada</nome>
+        <descricao>Muito bom</descricao>
+        <ingredientes>
+            <ingrediente>Macarrão</ingrediente>
+            <ingrediente>Carne moída</ingrediente>
+            <ingrediente>Molho</ingrediente>
+            <ingrediente>Queijo ralado</ingrediente>
+        </ingredientes>
+        <preco>15.00</preco>
+        <calorias>1200</calorias>
+        <tempoPreparo>50 min</tempoPreparo>
         <moeda>USD</moeda>
     </prato>
-    <prato id="04" >
-        <nome>sopa</nome>
-        <descricao> muito bom  </descricao>
-        <igredientes> macarrão ,tempero , legumes e carne </igredientes>
-        <preço> 10 reais </preço>
-        <calorias>580 kcl</calorias>
-        <tempo_de_preparo> 48 min </tempo_de_preparo>
+    <prato id="4">
+        <nome>Sopa</nome>
+        <descricao>Muito bom</descricao>
+        <ingredientes>
+            <ingrediente>Macarrão</ingrediente>
+            <ingrediente>Tempero</ingrediente>
+            <ingrediente>Legumes</ingrediente>
+            <ingrediente>Carne</ingrediente>
+        </ingredientes>
+        <preco>10.00</preco>
+        <calorias>580</calorias>
+        <tempoPreparo>48 min</tempoPreparo>
         <moeda>BRL</moeda>
     </prato>
-    <prato id="05" >
-        <nome>salada de fruta</nome>
-        <descricao> varias frutas cortadas  </descricao>
-        <igredientes> banana , mamão , açucar , leite , melão e maçan </igredientes>
-        <preço> 5 reais </preço>
-        <calorias>230 kcl</calorias>
-        <tempo_de_preparo> 20 min </tempo_de_preparo>
+    <prato id="5">
+        <nome>Salada de Fruta</nome>
+        <descricao>Várias frutas cortadas</descricao>
+        <ingredientes>
+            <ingrediente>Banana</ingrediente>
+            <ingrediente>Mamão</ingrediente>
+            <ingrediente>Açúcar</ingrediente>
+            <ingrediente>Leite</ingrediente>
+            <ingrediente>Melão</ingrediente>
+            <ingrediente>Maçã</ingrediente>
+        </ingredientes>
+        <preco>5.00</preco>
+        <calorias>230</calorias>
+        <tempoPreparo>20 min</tempoPreparo>
         <moeda>BRL</moeda>
     </prato>
 </cardapio>
