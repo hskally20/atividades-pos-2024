@@ -1,0 +1,46 @@
+<? versão xml = "1.0" codificação = "utf-8"?>
+<! DOCTYPE imobiliaria [
+ <! ELEMENT imobiliaria (imovel+)>
+ <! ELEMENT imovel (descrição, proprietário, endereço, características, valor)>
+ <! Descrição do ELEMENTO (#PCDATA)>
+
+ <! ELEMENT proprietário (nome, (e-mail?, telefone*))>
+ <! Nome do ELEMENTO (#PCDATA)>
+ <! E-mail ELEMENT (#PCDATA)>
+ <! Telefone ELEMENT (#PCDATA)>
+
+ <! ELEMENT endereco (rua, bairro, cidade, numero?) >
+ <! Rua ELEMENT (#PCDATA)>
+ <! ELEMENT bairro (#PCDATA)>
+ <! ELEMENT cidade (#PCDATA)>
+ <! Número do ELEMENTO (#PCDATA)>
+
+ <! ELEMENT caracteristicas (tamanho, numQuartos, numBanheiros)>
+ <! ELEMENT tamanho (#PCDATA)>
+ <! ELEMENT numQuartos (#PCDATA)>
+ <! Casas de banho (#PCDATA)>
+
+ <! Valor do ELEMENTO (#PCDATA)>
+]>
+<imobiliaria>
+  <imóvel: id = 'a1'>
+    <descricao>Casa com quintal amplo</descricao>
+    <proprietário>
+      <nome>ari</nome>
+      <E-mail>ari@example.com</E-mail>
+      <telefone>123456789</telefone>
+    </proprietário>
+    <endereco>
+      <rua>Rua das Flores</rua>
+      <bairro>Jardim Primavera</bairro>
+      <cidade>Cidade Nova</cidade>
+      <número>123</número>
+    </endereco>
+    <Características>
+      <tamanho>250.</tamanho>
+      <numQuartos>4</numQuartos>
+      <numBanheiros>3</numBanheiros>
+    </Características>
+    <valor>R$500.000,00</valor>
+  </imovel>
+</imobiliaria>
