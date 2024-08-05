@@ -1,46 +1,42 @@
-<? versão xml = "1.0" codificação = "utf-8"?>
-<! DOCTYPE imobiliaria [
- <! ELEMENT imobiliaria (imovel+)>
- <! ELEMENT imovel (descrição, proprietário, endereço, características, valor)>
- <! Descrição do ELEMENTO (#PCDATA)>
-
- <! ELEMENT proprietário (nome, (e-mail?, telefone*))>
- <! Nome do ELEMENTO (#PCDATA)>
- <! E-mail ELEMENT (#PCDATA)>
- <! Telefone ELEMENT (#PCDATA)>
-
- <! ELEMENT endereco (rua, bairro, cidade, numero?) >
- <! Rua ELEMENT (#PCDATA)>
- <! ELEMENT bairro (#PCDATA)>
- <! ELEMENT cidade (#PCDATA)>
- <! Número do ELEMENTO (#PCDATA)>
-
- <! ELEMENT caracteristicas (tamanho, numQuartos, numBanheiros)>
- <! ELEMENT tamanho (#PCDATA)>
- <! ELEMENT numQuartos (#PCDATA)>
- <! Casas de banho (#PCDATA)>
-
- <! Valor do ELEMENTO (#PCDATA)>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE imobiliaria [
+  <!ELEMENT imobiliaria (imovel+)>
+  <!ELEMENT imovel (descricao, proprietario, endereco, caracteristicas, valor)>
+  <!ELEMENT descricao (#PCDATA)>
+  <!ELEMENT proprietario (nome, (email?, telefone*))>
+  <!ELEMENT nome (#PCDATA)>
+  <!ELEMENT email (#PCDATA)>
+  <!ELEMENT telefone (#PCDATA)>
+  <!ELEMENT endereco (rua, bairro, cidade, numero?)>
+  <!ELEMENT rua (#PCDATA)>
+  <!ELEMENT bairro (#PCDATA)>
+  <!ELEMENT cidade (#PCDATA)>
+  <!ELEMENT numero (#PCDATA)>
+  <!ELEMENT caracteristicas (tamanho, numQuartos, numBanheiros)>
+  <!ELEMENT tamanho (#PCDATA)>
+  <!ELEMENT numQuartos (#PCDATA)>
+  <!ELEMENT numBanheiros (#PCDATA)>
+  <!ELEMENT valor (#PCDATA)>
 ]>
 <imobiliaria>
-  <imóvel: id = 'a1'>
+  <imovel>
     <descricao>Casa com quintal amplo</descricao>
-    <proprietário>
-      <nome>ari</nome>
-      <E-mail>ari@example.com</E-mail>
+    <proprietario>
+      <nome>Ari</nome>
+      <email>ari@example.com</email>
       <telefone>123456789</telefone>
-    </proprietário>
+    </proprietario>
     <endereco>
       <rua>Rua das Flores</rua>
       <bairro>Jardim Primavera</bairro>
       <cidade>Cidade Nova</cidade>
-      <número>123</número>
+      <numero>123</numero>
     </endereco>
-    <Características>
-      <tamanho>250.</tamanho>
+    <caracteristicas>
+      <tamanho>250.0</tamanho>
       <numQuartos>4</numQuartos>
       <numBanheiros>3</numBanheiros>
-    </Características>
+    </caracteristicas>
     <valor>R$500.000,00</valor>
   </imovel>
 </imobiliaria>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:p="http://imobiliaria.org"
+        targetNamespace="http://imobiliaria.org"
+        elementFormDefault="qualified">
+
+    <element name="descricao" type="string"/>
+    <element name="nome" type="string"/>
+    <element name="email" type="string"/>
+    <element name="telefone" type="string"/>
+    <element name="rua" type="string"/>
+    <element name="bairro" type="string"/>
+    <element name="cidade" type="string"/>
+    <element name="numero" type="string"/>
+    <element name="tamanho" type="decimal"/>
+    <element name="numQuartos" type="integer"/>
+    <element name="numBanheiros" type="integer"/>
+    <element name="valor" type="decimal"/>
+
+    <complexType name="ProprietarioType">
+        <sequence>
+            <element name="nome"/>
+            <element name="email" minOccurs="0"/>
+            <element name="telefone" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="EnderecoType">
+        <sequence>
+            <element name="rua"/>
+            <element name="bairro"/>
+            <element name="cidade"/>
+            <element name="numero" minOccurs="0"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="CaracteristicasType">
+        <sequence>
+            <element name="tamanho"/>
+            <element name="numQuartos"/>
+            <element name="numBanheiros"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="ImovelType">
+        <sequence>
+            <element name="descricao"/>
+            <element name="proprietario" type="p:ProprietarioType"/>
+            <element name="endereco" type="p:EnderecoType"/>
+            <element name="caracteristicas" type="p:CaracteristicasType"/>
+            <element name="valor"/>
+        </sequence>
+        <attribute name="id" type="integer" use="required"/>
+    </complexType>
+
+    <complexType name="ImobiliariaType">
+        <sequence>
+            <element name="imovel" type="p:ImovelType" minOccurs="1" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+    <element name="imobiliaria" type="p:ImobiliariaType"/>
+
+</schema>
