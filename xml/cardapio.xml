@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <cardapio xmlns="http://prato.org"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://prato.org prato.xsd">
+          schemaLocation="http://prato.org prato.xsd">
     <prato id="1">
         <nome>Miojo</nome>
         <descricao>Macarrão instantâneo</descricao>
