@@ -1,0 +1,163 @@
+
+{
+  "quiz": {
+    "versao": "a1",
+    "disciplina": "desenvolvimento web",
+    "professor": {
+      "nome": "Ari",
+      "matricula": "226677"
+    },
+    "turma": "info 2v",
+    "data": "2024/07/01",
+    "questoes": [
+      {
+        "enunciado": "É correto usar update sem where no banco de dados?",
+        "pontuacao": 5,
+        "alternativas": [
+          {
+            "texto": "Sim",
+            "correta": "sim"
+          },
+          {
+            "texto": "Não",
+            "correta": "nao"
+          }
+        ]
+      },
+      {
+        "enunciado": "É correto usar update sem where no banco de dados?",
+        "pontuacao": 5,
+        "alternativas": [
+          {
+            "texto": "Sim",
+            "correta": "sim"
+          },
+          {
+            "texto": "Não",
+            "correta": "nao"
+          },
+          {
+            "texto": "Depende",
+            "correta": "nao"
+          },
+          {
+            "texto": "Somente em casos específicos",
+            "correta": "nao"
+          }
+        ]
+      },
+      {
+        "enunciado": "Qual é a principal linguagem de marcação usada na web?",
+        "pontuacao": 5,
+        "alternativas": [
+          {
+            "texto": "CSS",
+            "correta": "nao"
+          },
+          {
+            "texto": "JavaScript",
+            "correta": "nao"
+          },
+          {
+            "texto": "HTML",
+            "correta": "sim"
+          },
+          {
+            "texto": "Python",
+            "correta": "nao"
+          }
+        ]
+      },
+      {
+        "enunciado": "O que significa CSS?",
+        "pontuacao": 5,
+        "alternativas": [
+          {
+            "texto": "Computer Style Sheets",
+            "correta": "nao"
+          },
+          {
+            "texto": "Cascading Style Sheets",
+            "correta": "sim"
+          },
+          {
+            "texto": "Creative Style Sheets",
+            "correta": "nao"
+          },
+          {
+            "texto": "Colorful Style Sheets",
+            "correta": "nao"
+          }
+        ]
+      },
+      {
+        "enunciado": "Qual é a função do JavaScript em uma página web?",
+        "pontuacao": 5,
+        "alternativas": [
+          {
+            "texto": "Estilizar a página",
+            "correta": "nao"
+          },
+          {
+            "texto": "Marcar a estrutura do conteúdo",
+            "correta": "nao"
+          },
+          {
+            "texto": "Adicionar interatividade à página",
+            "correta": "sim"
+          },
+          {
+            "texto": "Gerenciar banco de dados",
+            "correta": "nao"
+          }
+        ]
+      },
+      {
+        "enunciado": "O que é um framework front-end?",
+        "pontuacao": 5,
+        "alternativas": [
+          {
+            "texto": "Uma biblioteca de código pronta para facilitar o desenvolvimento da interface do usuário",
+            "correta": "sim"
+          },
+          {
+            "texto": "Uma linguagem de programação",
+            "correta": "nao"
+          },
+          {
+            "texto": "Um banco de dados",
+            "correta": "nao"
+          },
+          {
+            "texto": "Um servidor web",
+            "correta": "nao"
+          }
+        ]
+      },
+      {
+        "enunciado": "Qual das seguintes opções é um framework JavaScript?",
+        "pontuacao": 5,
+        "alternativas": [
+          {
+            "texto": "Django",
+            "correta": "nao"
+          },
+          {
+            "texto": "React",
+            "correta": "sim"
+          },
+          {
+            "texto": "Laravel",
+            "correta": "nao"
+          },
+          {
+            "texto": "Flask",
+            "correta": "nao"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+

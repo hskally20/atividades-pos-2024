@@ -1,0 +1,87 @@
+{
+    "imobiliaria": {
+      "imoveis": [
+        {
+          "descricao": "Casa com quintal amplo",
+          "proprietario": {
+            "nome": "Ari",
+            "email": "ari@example.com",
+            "telefone": "123456789"
+          },
+          "endereco": {
+            "rua": "Rua das Flores",
+            "bairro": "Jardim Primavera",
+            "cidade": "Cidade Nova",
+            "numero": 123
+          },
+          "caracteristicas": {
+            "tamanho": 250.0,
+            "numQuartos": 4,
+            "numBanheiros": 3
+          },
+          "valor": "R$500.000,00"
+        },
+        {
+          "descricao": "Apartamento moderno com vista para o mar",
+          "proprietario": {
+            "nome": "Julia",
+            "email": "julia@example.com",
+            "telefone": "987654321"
+          },
+          "endereco": {
+            "rua": "Avenida Atlântica",
+            "bairro": "Praia Grande",
+            "cidade": "Costa Azul",
+            "numero": 456
+          },
+          "caracteristicas": {
+            "tamanho": 100.0,
+            "numQuartos": 2,
+            "numBanheiros": 2
+          },
+          "valor": "R$750.000,00"
+        },
+        {
+          "descricao": "Sobrado com área de lazer e piscina",
+          "proprietario": {
+            "nome": "Carlos",
+            "email": "carlos@example.com",
+            "telefone": "321654987"
+          },
+          "endereco": {
+            "rua": "Rua das Palmeiras",
+            "bairro": "Centro",
+            "cidade": "Vila Nova",
+            "numero": 789
+          },
+          "caracteristicas": {
+            "tamanho": 350.0,
+            "numQuartos": 5,
+            "numBanheiros": 4
+          },
+          "valor": "R$1.200.000,00"
+        },
+        {
+          "descricao": "Chácara com ampla área verde e lago",
+          "proprietario": {
+            "nome": "Fernanda",
+            "email": "fernanda@example.com",
+            "telefone": "456789123"
+          },
+          "endereco": {
+            "rua": "Estrada do Sol",
+            "bairro": "Zona Rural",
+            "cidade": "Campinas",
+            "numero": 101
+          },
+          "caracteristicas": {
+            "tamanho": 500.0,
+            "numQuartos": 6,
+            "numBanheiros": 3
+          },
+          "valor": "R$900.000,00"
+        }
+      ]
+    }
+  }
+  

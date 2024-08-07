@@ -1,0 +1,74 @@
+{
+    "pratos": [
+        {
+            "nome": "Miojo",
+            "descricao": "Macarrão instantâneo",
+            "ingredientes": [
+                "Macarrão",
+                "Tempero",
+                "Sal"
+            ],
+            "preco": 4.00,
+            "calorias": 580,
+            "tempoPreparo": "4 min",
+            "moeda": "BRL"
+        },
+        {
+            "nome": "Feijoada",
+            "descricao": "Boa com churrasco",
+            "ingredientes": [
+                "Linguiça",
+                "Feijão preto",
+                "Carne de charque"
+            ],
+            "preco": 10.00,
+            "calorias": 780,
+            "tempoPreparo": "1h 30m",
+            "moeda": "USD"
+        },
+        {
+            "nome": "Macarronada",
+            "descricao": "Muito bom",
+            "ingredientes": [
+                "Macarrão",
+                "Carne moída",
+                "Molho",
+                "Queijo ralado"
+            ],
+            "preco": 15.00,
+            "calorias": 1200,
+            "tempoPreparo": "50 min",
+            "moeda": "USD"
+        },
+        {
+            "nome": "Sopa",
+            "descricao": "Muito bom",
+            "ingredientes": [
+                "Macarrão",
+                "Tempero",
+                "Legumes",
+                "Carne"
+            ],
+            "preco": 10.00,
+            "calorias": 580,
+            "tempoPreparo": "48 min",
+            "moeda": "BRL"
+        },
+        {
+            "nome": "Salada de Fruta",
+            "descricao": "Várias frutas cortadas",
+            "ingredientes": [
+                "Banana",
+                "Mamão",
+                "Açúcar",
+                "Leite",
+                "Melão",
+                "Maçã"
+            ],
+            "preco": 5.00,
+            "calorias": 230,
+            "tempoPreparo": "20 min",
+            "moeda": "BRL"
+        }
+    ]
+}
