@@ -1,0 +1,69 @@
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:q="http://quiz.org" 
+           targetNamespace="http://quiz.org" 
+           elementFormDefault="qualified">
+
+    <!-- Definição do elemento raiz -->
+    <xs:element name="quiz">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="disciplina" type="xs:string"/>
+                <xs:element name="professor" type="q:professorType"/>
+                <xs:element name="turma" type="xs:string"/>
+                <xs:element name="data" type="xs:string"/>
+                <xs:element name="questões" type="q:questõesType"/>
+            </xs:sequence>
+            <xs:attribute name="versao" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definição do tipo professor -->
+    <xs:complexType name="professorType">
+        <xs:sequence>
+            <xs:element name="nome" type="xs:string"/>
+            <xs:element name="matrícula" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definição do tipo questões -->
+    <xs:complexType name="questõesType">
+        <xs:sequence>
+            <xs:element name="questão" type="q:questãoType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definição do tipo questão -->
+    <xs:complexType name="questãoType">
+        <xs:sequence>
+            <xs:element name="enunciado" type="xs:string"/>
+            <xs:element name="pontuação" type="xs:string"/>
+            <xs:element name="alternativas" type="q:alternativasType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definição do tipo alternativas -->
+    <xs:complexType name="alternativasType">
+        <xs:sequence>
+            <xs:element name="alternativa" type="q:alternativaType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definição do tipo alternativa -->
+    <xs:complexType name="alternativaType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="correta" type="q:simNaoType" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <!-- Definição do tipo simNaoType -->
+    <xs:simpleType name="simNaoType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="sim"/>
+            <xs:enumeration value="nao"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
