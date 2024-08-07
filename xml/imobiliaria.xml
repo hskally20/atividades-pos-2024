@@ -17,26 +17,110 @@
   <!ELEMENT numQuartos (#PCDATA)>
   <!ELEMENT numBanheiros (#PCDATA)>
   <!ELEMENT valor (#PCDATA)>
+
 ]>
 <imobiliaria>
-  <imovel>
-    <descricao>Casa com quintal amplo</descricao>
-    <proprietario>
-      <nome>Ari</nome>
-      <email>ari@example.com</email>
-      <telefone>123456789</telefone>
-    </proprietario>
-    <endereco>
-      <rua>Rua das Flores</rua>
-      <bairro>Jardim Primavera</bairro>
-      <cidade>Cidade Nova</cidade>
-      <numero>123</numero>
-    </endereco>
-    <caracteristicas>
-      <tamanho>250.0</tamanho>
-      <numQuartos>4</numQuartos>
-      <numBanheiros>3</numBanheiros>
-    </caracteristicas>
-    <valor>R$500.000,00</valor>
-  </imovel>
+
+    <imovel>
+      <descricao>Casa com quintal amplo</descricao>
+      <proprietario>
+        <nome>Ari</nome>
+        <email>ari@example.com</email>
+        <telefone>123456789</telefone>
+      </proprietario>
+      <endereco>
+        <rua>Rua das Flores</rua>
+        <bairro>Jardim Primavera</bairro>
+        <cidade>Cidade Nova</cidade>
+        <numero>123</numero>
+      </endereco>
+      <caracteristicas>
+        <tamanho>250.0</tamanho>
+        <numQuartos>4</numQuartos>
+        <numBanheiros>3</numBanheiros>
+      </caracteristicas>
+      <valor>R$500.000,00</valor>
+    </imovel>
+    <imovel>
+      <descricao>Apartamento no centro</descricao>
+      <proprietario>
+        <nome>Maria</nome>
+        <email>maria@example.com</email>
+        <telefone>987654321</telefone>
+      </proprietario>
+      <endereco>
+        <rua>Avenida Central</rua>
+        <bairro>Centro</bairro>
+        <cidade>Grande Cidade</cidade>
+        <numero>456</numero>
+      </endereco>
+      <caracteristicas>
+        <tamanho>120.0</tamanho>
+        <numQuartos>3</numQuartos>
+        <numBanheiros>2</numBanheiros>
+      </caracteristicas>
+      <valor>R$400.000,00</valor>
+    </imovel>
+    <imovel>
+      <descricao>Chácara com piscina</descricao>
+      <proprietario>
+        <nome>João</nome>
+        <email>joao@example.com</email>
+        <telefone>112233445</telefone>
+      </proprietario>
+      <endereco>
+        <rua>Estrada das Palmeiras</rua>
+        <bairro>Zona Rural</bairro>
+        <cidade>Cidade Pequena</cidade>
+        <numero>789</numero>
+      </endereco>
+      <caracteristicas>
+        <tamanho>1000.0</tamanho>
+        <numQuartos>5</numQuartos>
+        <numBanheiros>4</numBanheiros>
+      </caracteristicas>
+      <valor>R$800.000,00</valor>
+    </imovel>
+    <imovel>
+      <descricao>Casa geminada</descricao>
+      <proprietario>
+        <nome>Clara</nome>
+        <email>clara@example.com</email>
+        <telefone>556677889</telefone>
+      </proprietario>
+      <endereco>
+        <rua>Rua do Campo</rua>
+        <bairro>Vila Nova</bairro>
+        <cidade>Metrópole</cidade>
+        <numero>321</numero>
+      </endereco>
+      <caracteristicas>
+        <tamanho>180.0</tamanho>
+        <numQuartos>3</numQuartos>
+        <numBanheiros>2</numBanheiros>
+      </caracteristicas>
+      <valor>R$350.000,00</valor>
+    </imovel>
+    <imovel>
+      <descricao>Kitnet mobiliada</descricao>
+      <proprietario>
+        <nome>Lucas</nome>
+        <email>lucas@example.com</email>
+        <telefone>667788990</telefone>
+      </proprietario>
+      <endereco>
+        <rua>Rua das Acácias</rua>
+        <bairro>Jardim das Árvores</bairro>
+        <cidade>Pequena Cidade</cidade>
+        <numero>654</numero>
+      </endereco>
+      <caracteristicas>
+        <tamanho>45.0</tamanho>
+        <numQuartos>1</numQuartos>
+        <numBanheiros>1</numBanheiros>
+      </caracteristicas>
+      <valor>R$150.000,00</valor>
+    </imovel>
+
+
 </imobiliaria>
