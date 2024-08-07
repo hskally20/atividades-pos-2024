@@ -1,10 +1,10 @@
 from xml.dom.minidom import parse
 
 # Caminho para o arquivo XML
-file_path = "C:/Users/20211181110021/Desktop/atividades-pos-2024/xml/cardapio.xml"
+file_path = "C:/Users/20211181110021/Documents/atividades-pos-2024/xml/cardapio.xml"
 
 def listar_pratos(pratos):
-    """Listar todos os pratos disponíveis com seus IDs e nomes."""
+    
     print("\nPratos disponíveis:")
     for prato in pratos:
         id_atributo = prato.getAttribute('id')
@@ -13,7 +13,7 @@ def listar_pratos(pratos):
         print(f"ID: {id_atributo} - Nome: {nome}")
 
 def exibir_detalhes(prato_encontrado):
-    """Exibir os detalhes completos do prato encontrado."""
+    
     id_atributo = prato_encontrado.getAttribute('id')
     
     descricao_element = prato_encontrado.getElementsByTagName('descricao')
@@ -46,15 +46,12 @@ def exibir_detalhes(prato_encontrado):
     print("---\n")
 
 try:
-    # Carrega o documento XML
     dom = parse(file_path)
     print("Arquivo XML carregado com sucesso.")
 
-    # Obtém todos os pratos
     pratos = dom.getElementsByTagName('prato')
     
     while True:
-        # Exibe o menu
         print("\nMenu:")
         print("1. Ver detalhes de um prato")
         print("2. Sair")
@@ -66,7 +63,7 @@ try:
             resposta = input('\nDigite o ID ou nome do prato que você quer saber mais detalhes: ').strip().lower()
             prato_encontrado = None
             
-            # Procura o prato baseado na resposta do usuário
+            
             for prato in pratos:
                 id_atributo = prato.getAttribute('id')
                 nome_element = prato.getElementsByTagName('nome')
@@ -76,7 +73,6 @@ try:
                     prato_encontrado = prato
                     break
 
-            # Exibe os detalhes do prato encontrado
             if prato_encontrado:
                 exibir_detalhes(prato_encontrado)
             else:
