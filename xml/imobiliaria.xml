@@ -20,7 +20,6 @@
 
 ]>
 <imobiliaria>
-
     <imovel>
       <descricao>Casa com quintal amplo</descricao>
       <proprietario>
@@ -121,6 +120,4 @@
       </caracteristicas>
       <valor>R$150.000,00</valor>
     </imovel>
-
-
 </imobiliaria>

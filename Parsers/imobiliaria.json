@@ -1,0 +1,104 @@
+{
+    "imoveis": [
+        {
+            "descricao": "Casa com quintal amplo",
+            "proprietario": {
+                "nome": "Ari",
+                "email": "ari@example.com",
+                "telefone": "123456789"
+            },
+            "endereco": {
+                "rua": "Rua das Flores",
+                "bairro": "Jardim Primavera",
+                "cidade": "Cidade Nova",
+                "numero": "123"
+            },
+            "caracteristicas": {
+                "tamanho": "250.0",
+                "numQuartos": "4",
+                "numBanheiros": "3"
+            },
+            "valor": "R$500.000,00"
+        },
+        {
+            "descricao": "Apartamento no centro",
+            "proprietario": {
+                "nome": "Maria",
+                "email": "maria@example.com",
+                "telefone": "987654321"
+            },
+            "endereco": {
+                "rua": "Avenida Central",
+                "bairro": "Centro",
+                "cidade": "Grande Cidade",
+                "numero": "456"
+            },
+            "caracteristicas": {
+                "tamanho": "120.0",
+                "numQuartos": "3",
+                "numBanheiros": "2"
+            },
+            "valor": "R$400.000,00"
+        },
+        {
+            "descricao": "Ch\u00e1cara com piscina",
+            "proprietario": {
+                "nome": "Jo\u00e3o",
+                "email": "joao@example.com",
+                "telefone": "112233445"
+            },
+            "endereco": {
+                "rua": "Estrada das Palmeiras",
+                "bairro": "Zona Rural",
+                "cidade": "Cidade Pequena",
+                "numero": "789"
+            },
+            "caracteristicas": {
+                "tamanho": "1000.0",
+                "numQuartos": "5",
+                "numBanheiros": "4"
+            },
+            "valor": "R$800.000,00"
+        },
+        {
+            "descricao": "Casa geminada",
+            "proprietario": {
+                "nome": "Clara",
+                "email": "clara@example.com",
+                "telefone": "556677889"
+            },
+            "endereco": {
+                "rua": "Rua do Campo",
+                "bairro": "Vila Nova",
+                "cidade": "Metr\u00f3pole",
+                "numero": "321"
+            },
+            "caracteristicas": {
+                "tamanho": "180.0",
+                "numQuartos": "3",
+                "numBanheiros": "2"
+            },
+            "valor": "R$350.000,00"
+        },
+        {
+            "descricao": "Kitnet mobiliada",
+            "proprietario": {
+                "nome": "Lucas",
+                "email": "lucas@example.com",
+                "telefone": "667788990"
+            },
+            "endereco": {
+                "rua": "Rua das Ac\u00e1cias",
+                "bairro": "Jardim das \u00c1rvores",
+                "cidade": "Pequena Cidade",
+                "numero": "654"
+            },
+            "caracteristicas": {
+                "tamanho": "45.0",
+                "numQuartos": "1",
+                "numBanheiros": "1"
+            },
+            "valor": "R$150.000,00"
+        }
+    ]
+}
