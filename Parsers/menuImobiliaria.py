@@ -14,7 +14,6 @@ def lista_nomes_imoveis(imoveis):
       print(" imoveis existentes :")
       for imovel in imoveis:
         print(f" {imovel.get('descricao' , 'NDA')} , id : {imovel.get('id' , 'NDA')}")
-    
 
 def exibir_detalhes_imovel(imoveis):
     for imovel in imoveis:
@@ -32,12 +31,8 @@ def exibir_detalhes_imovel(imoveis):
             print("---\n")
             return
     print("Imóvel não encontrado.")
-
-
 # Supondo que parsed_data tenha uma chave 'imoveis' que é uma lista
 # Passa a lista de imóveis para a função
-
-
 while True:
     print("\nMenu:")
     print("1. Ver a lista de imóveis disponíveis")
@@ -55,7 +50,6 @@ while True:
             if escolha2 == '1':
                 id_imovel = input("Digite o ID do imóvel ").strip()
                 exibir_detalhes_imovel(parsed_data.get('imoveis', []))
-
         else:
             print("Saindo do programa...")
     
