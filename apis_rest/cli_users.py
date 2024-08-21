@@ -23,8 +23,21 @@ elif opcao == '2' :
     for todo in response:
         print(todo['title'])
 elif opcao == '3' :
-    user_id = input('digite o id do usuario : ')
-    old_usser = requests(api_url+'/'+user_id ).status_code
-     
-elif opcao == '1' :
-    pass
+    print('digite 1 para criar um novo usuario')
+    print('digite 2 para ver todos os usuario')
+    print('dite 3 para deleta um usuario')
+    print('digite 4 paraa tualizar um usuario')
+    resp = input('digite aki : ')
+    if resp == '1' :
+       pass
+    if resp == '2' :
+       pass
+    if resp == '3' :
+       user_id = input('digite o id do usuario : ')
+       response = requests.get( api_url+ '/' +user_id).json
+       response = requests.delete(api_url).status_code()
+       print(response.json())
+       if response == '200':
+          print('sucesso')
+    if resp == '4' :
+       pass
