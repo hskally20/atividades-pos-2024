@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Pokémon</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .pokemon-card {
+            transition: transform 0.2s;
+        }
+        .pokemon-card:hover {
+            transform: scale(1.05);
+        }
+        .pokemon-img {
+            height: 150px;
+            object-fit: contain;
+        }
+        .accordion-button {
+            background-color: #007bff;
+            color: white;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #0056b3;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Lista de Pokémon</h1>
+        
+        <div class="d-flex justify-content-between mb-4">
+            <input type="text" id="search-input" class="form-control" placeholder="Buscar Pokémon" />
+            <select id="type-filter" class="form-select w-auto ms-2">
+                <option value="">Todos os Tipos</option>
+                <option value="grass">Grama</option>
+                <option value="fire">Fogo</option>
+                <option value="water">Água</option>
+                <option value="bug">Inseto</option>
+                <option value="normal">Normal</option>
+                <option value="electric">Elétrico</option>
+                <option value="ground">Terra</option>
+                <option value="fairy">Fada</option>
+                <option value="fighting">Lutador</option>
+                <option value="psychic">Psíquico</option>
+                <option value="rock">Pedra</option>
+                <option value="ghost">Fantasma</option>
+                <option value="dragon">Dragão</option>
+                <option value="ice">Gelo</option>
+                <option value="steel">Aço</option>
+                <option value="dark">Sombrio</option>
+            </select>
+        </div>
+
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button id="load-pokemon-btn" class="btn btn-primary btn-lg">Carregar Pokémon</button>
+        </div>
+
+        <div id="pokemon-container" class="row mt-4"></div>
+
+        <nav id="pagination" aria-label="Page navigation" class="mt-4">
+            <ul class="pagination justify-content-center"></ul>
+        </nav>
+    </div>
+    <!-- Bootstrap 5 JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let currentPage = 1;
+        const pokemonsPerPage = 10;
+        let allPokemons = [];
+        let filteredPokemons = [];
+
+        // Função para carregar os Pokémon
+        async function loadPokemon() {
+            try {
+                const url = 'https://pokeapi.co/api/v2/pokemon?limit=150'; // Carregar um número maior para facilitar a busca e o filtro
+                const response = await fetch(url);
+                const { results: pokemons } = await response.json();
+
+                // Carregar os detalhes de cada Pokémon para incluir tipos
+                allPokemons = await Promise.all(pokemons.map(async (pokemon) => {
+                    const detailsResponse = await fetch(pokemon.url);
+                    return detailsResponse.json();
+                }));
+
+                filteredPokemons = allPokemons;
+                renderPokemons();
+                renderPagination();
+            } catch (error) {
+                console.error('Erro ao buscar os Pokémon:', error);
+                alert('Não foi possível carregar os Pokémon.');
+            }
+        }
+
+        // Função para renderizar os Pokémon na tela
+        function renderPokemons() {
+            const pokemonContainer = document.getElementById('pokemon-container');
+            pokemonContainer.innerHTML = ''; // Limpa o container anterior
+
+            const start = (currentPage - 1) * pokemonsPerPage;
+            const end = start + pokemonsPerPage;
+            const pokemonsToDisplay = filteredPokemons.slice(start, end);
+
+            pokemonsToDisplay.forEach(pokemon => {
+                const card = document.createElement('div');
+                card.className = 'col-md-4 mb-4';
+                card.innerHTML = `
+                    <div class="card pokemon-card">
+                        <img src="${pokemon.sprites.front_default}" class="card-img-top pokemon-img" alt="${pokemon.name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${pokemon.name}</h5>
+                            <p><strong>ID:</strong> ${pokemon.id}</p>
+                            <p><strong>Altura:</strong> ${pokemon.height / 10} m</p>
+                            <p><strong>Peso:</strong> ${pokemon.weight / 10} kg</p>
+                            <p><strong>Tipos:</strong> ${pokemon.types.map(type => type.type.name).join(', ')}</p>
+                            <p><strong>Habilidades:</strong> ${pokemon.abilities.map(ability => ability.ability.name).join(', ')}</p>
+                        </div>
+                    </div>
+                `;
+                pokemonContainer.appendChild(card);
+            });
+
+            if (pokemonsToDisplay.length === 0) {
+                pokemonContainer.innerHTML = '<p class="text-center">Nenhum Pokémon encontrado.</p>';
+            }
+        }
+
+        // Função para renderizar a paginação
+        function renderPagination() {
+            const paginationElement = document.getElementById('pagination').querySelector('.pagination');
+            paginationElement.innerHTML = ''; // Limpa a paginação anterior
+
+            const pageCount = Math.ceil(filteredPokemons.length / pokemonsPerPage);
+            for (let i = 1; i <= pageCount; i++) {
+                const pageItem = document.createElement('li');
+                pageItem.className = 'page-item' + (i === currentPage ? ' active' : '');
+                pageItem.innerHTML = `<a class="page-link" href="#">${i}</a>`;
+                pageItem.querySelector('a').addEventListener('click', (event) => {
+                    event.preventDefault();
+                    currentPage = i;
+                    renderPokemons();
+                    renderPagination();
+                });
+                paginationElement.appendChild(pageItem);
+            }
+        }
+
+        // Função para filtrar Pokémon por tipo
+        function filterByType(type) {
+            if (type) {
+                filteredPokemons = allPokemons.filter(pokemon => {
+                    return pokemon.types.some(pokemonType => pokemonType.type.name === type);
+                });
+            } else {
+                filteredPokemons = allPokemons;
+            }
+            currentPage = 1; // Reseta para a primeira página ao filtrar
+            renderPokemons();
+            renderPagination();
+        }
+
+        // Função para buscar Pokémon
+        function searchPokemons() {
+            const searchInput = document.getElementById('search-input').value.toLowerCase();
+            filteredPokemons = allPokemons.filter(pokemon => pokemon.name.toLowerCase().includes(searchInput));
+            currentPage = 1; // Reseta para a primeira página ao buscar
+            renderPokemons();
+            renderPagination();
+        }
+
+        // Adiciona eventos aos filtros e busca
+        document.getElementById('load-pokemon-btn').addEventListener('click', loadPokemon);
+        document.getElementById('type-filter').addEventListener('change', (event) => {
+            filterByType(event.target.value);
+        });
+        document.getElementById('search-input').addEventListener('input', searchPokemons);
+    </script>
+</body>
+</html>
