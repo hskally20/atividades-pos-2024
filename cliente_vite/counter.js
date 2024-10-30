@@ -10,19 +10,20 @@ setCounter(0)
 
 
 
+// src/dom.js
 let currentPage = 1;
 const pokemonsPerPage = 10;
 let allPokemons = [];
 let filteredPokemons = [];
 
-// Função para carregar os Pokémon
-async function loadPokemon() {
-    try {
-        const url = 'https://pokeapi.co/api/v2/pokemon?limit=150'; // Carregar um número maior para facilitar a busca e o filtro
-        const response = await fetch(url);
-        const { results: pokemons } = await response.json();
 
-        // Carregar os detalhes de cada Pokémon para incluir tipos
+const API_URL = 'https://pokeapi.co/api/v2/pokemon?limit=150';
+
+export async function fetchPokemons() {
+    try {
+        const response = await fetch(API_URL);
+        const { results: pokemons } = await response.json();
+        
         allPokemons = await Promise.all(pokemons.map(async (pokemon) => {
             const detailsResponse = await fetch(pokemon.url);
             return detailsResponse.json();
@@ -37,10 +38,9 @@ async function loadPokemon() {
     }
 }
 
-// Função para renderizar os Pokémon na tela
 function renderPokemons() {
     const pokemonContainer = document.getElementById('pokemon-container');
-    pokemonContainer.innerHTML = ''; // Limpa o container anterior
+    pokemonContainer.innerHTML = '';
 
     const start = (currentPage - 1) * pokemonsPerPage;
     const end = start + pokemonsPerPage;
@@ -70,10 +70,9 @@ function renderPokemons() {
     }
 }
 
-// Função para renderizar a paginação
 function renderPagination() {
     const paginationElement = document.getElementById('pagination').querySelector('.pagination');
-    paginationElement.innerHTML = ''; // Limpa a paginação anterior
+    paginationElement.innerHTML = '';
 
     const pageCount = Math.ceil(filteredPokemons.length / pokemonsPerPage);
     for (let i = 1; i <= pageCount; i++) {
@@ -90,8 +89,7 @@ function renderPagination() {
     }
 }
 
-// Função para filtrar Pokémon por tipo
-function filterByType(type) {
+export function filterByType(type) {
     if (type) {
         filteredPokemons = allPokemons.filter(pokemon => {
             return pokemon.types.some(pokemonType => pokemonType.type.name === type);
@@ -99,23 +97,14 @@ function filterByType(type) {
     } else {
         filteredPokemons = allPokemons;
     }
-    currentPage = 1; // Reseta para a primeira página ao filtrar
+    currentPage = 1;
     renderPokemons();
     renderPagination();
 }
 
-// Função para buscar Pokémon
-function searchPokemons() {
-    const searchInput = document.getElementById('search-input').value.toLowerCase();
-    filteredPokemons = allPokemons.filter(pokemon => pokemon.name.toLowerCase().includes(searchInput));
-    currentPage = 1; // Reseta para a primeira página ao buscar
+export function searchPokemons(searchInput) {
+    filteredPokemons = allPokemons.filter(pokemon => pokemon.name.toLowerCase().includes(searchInput.toLowerCase()));
+    currentPage = 1;
     renderPokemons();
     renderPagination();
 }
-
-// Adiciona eventos aos filtros e busca
-document.getElementById('load-pokemon-btn').addEventListener('click', loadPokemon);
-document.getElementById('type-filter').addEventListener('change', (event) => {
-    filterByType(event.target.value);
-});
-document.getElementById('search-input').addEventListener('input', searchPokemons);

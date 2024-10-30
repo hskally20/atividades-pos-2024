@@ -1,13 +1,65 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Pokémon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .pokemon-card {
+            transition: transform 0.2s;
+        }
+        .pokemon-card:hover {
+            transform: scale(1.05);
+        }
+        .pokemon-img {
+            height: 150px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Lista de Pokémon</h1>
+        
+        <div class="d-flex justify-content-between mb-4">
+            <input type="text" id="search-input" class="form-control" placeholder="Buscar Pokémon" />
+            <select id="type-filter" class="form-select w-auto ms-2">
+                <option value="">Todos os Tipos</option>
+                <option value="grass">Grama</option>
+                <option value="fire">Fogo</option>
+                <option value="water">Água</option>
+                <option value="bug">Inseto</option>
+                <option value="normal">Normal</option>
+                <option value="electric">Elétrico</option>
+                <option value="ground">Terra</option>
+                <option value="fairy">Fada</option>
+                <option value="fighting">Lutador</option>
+                <option value="psychic">Psíquico</option>
+                <option value="rock">Pedra</option>
+                <option value="ghost">Fantasma</option>
+                <option value="dragon">Dragão</option>
+                <option value="ice">Gelo</option>
+                <option value="steel">Aço</option>
+                <option value="dark">Sombrio</option>
+            </select>
+        </div>
+
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button id="load-pokemon-btn" class="btn btn-primary btn-lg">Carregar Pokémon</button>
+        </div>
+
+        <div id="pokemon-container" class="row mt-4"></div>
+
+        <nav id="pagination" aria-label="Page navigation" class="mt-4">
+            <ul class="pagination justify-content-center"></ul>
+        </nav>
+    </div>
+
     <script type="module" src="/main.js"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
